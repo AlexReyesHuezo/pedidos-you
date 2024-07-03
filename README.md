@@ -21,8 +21,6 @@ erDiagram
     }
 
     USUARIOS ||--o{ PEDIDOS : tiene
-
-    Usuarios "1" --> "0..*" Pedidos : Contiene
 ```
 
 
