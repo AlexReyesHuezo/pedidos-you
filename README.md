@@ -3,6 +3,7 @@
 Es un proyecto que implementa consultas a una base de datos MySQL con consultas de Query Builder, basado en el diagrama de entidad-relación mostrado abajo. El objetivo es gestionar los datos relacionados a los pedidos de productos de los usuarios.
 
 ## Diagrama Entidad-Relación
+```mermaid
 erDiagram
     USUARIOS {
         int Id PK
@@ -22,7 +23,7 @@ erDiagram
     USUARIOS ||--o{ PEDIDOS : tiene
 
     Usuarios "1" --> "0..*" Pedidos : Contiene
-end
+```
 
 
 ## License
