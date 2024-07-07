@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
  */
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
 
 class PedidoController extends Controller
 {
@@ -34,7 +35,9 @@ class PedidoController extends Controller
                 'producto' => $request->producto,
                 'cantidad' => $request->cantidad,
                 'total' => $request->total,
-                'id_usuario' => $request->id_usuario
+                'id_usuario' => $request->id_usuario,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ]);
             return response()->json($pedido, 201);
         } catch (\Exception $e) {

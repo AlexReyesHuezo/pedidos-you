@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
 
 class UsuarioController extends Controller
 {
@@ -26,7 +27,9 @@ class UsuarioController extends Controller
             $usuario = DB::table('usuarios')->insert([
                 'nombre' => $request->nombre,
                 'correo' => $request->correo,
-                'telefono' => $request->telefono
+                'telefono' => $request->telefono,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ]);
             return response()->json($usuario, 201);
         } catch (\Exception $e) {
