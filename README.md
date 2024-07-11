@@ -23,7 +23,9 @@ erDiagram
     USUARIOS ||--o{ PEDIDOS : tiene
 ```
 
+## Documentación de Postman de la API
+La documentación de Postman se encuentra en el siguiente enlace: [Documentación de Postman](https://documenter.getpostman.com/view/21524567/2sA3e5cTCv)
 
-## License
+### License
 
 El proyecto es de código abierto licenciado [GPL-3.0 license](https://www.gnu.org/licenses/gpl-3.0.html).
